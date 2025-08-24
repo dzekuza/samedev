@@ -106,74 +106,68 @@ export function WhatWeDo () {
                 </div>
               </button>
 
-              <div
-                className={cn(
-                  styles.accordionContent,
-                  'overflow-hidden transition-all duration-300 ease-in-out',
-                  isExpanded
-                    ? 'max-h-[1000px] opacity-100'
-                    : 'max-h-0 opacity-0'
-                )}
-              >
-                <div className={cn(
-                  'transition-all duration-300 ease-in-out',
-                  isExpanded
-                    ? 'translate-y-0 opacity-100'
-                    : '-translate-y-4 opacity-0'
-                )}>
-                  <p className={styles.description}>{item.description}</p>
-
-                  {item.filters.length > 0 && (
-                    <div className={styles.filters}>
-                      {item.filters.map((filter) => (
-                        <button
-                          key={filter}
-                          className={cn(
-                            styles.filterButton,
-                            'transition-all duration-200 ease-in-out hover:scale-105',
-                            selectedFilter === filter && styles.filterButtonActive
-                          )}
-                          onClick={() => setSelectedFilter(filter)}
-                          type="button"
-                        >
-                          {filter}
-                        </button>
-                      ))}
-                    </div>
+              {isExpanded && (
+                <div
+                  className={cn(
+                    styles.accordionContent,
+                    'overflow-hidden transition-all duration-300 ease-in-out'
                   )}
+                >
+                  <div className="transition-all duration-300 ease-in-out">
+                    <p className={styles.description}>{item.description}</p>
 
-                  {isLoading
-                    ? (
-                      <div className={styles.projects}>
-                        <div className="flex items-center justify-center py-8">
-                          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                        </div>
-                      </div>
-                    )
-                    : filteredProjects.length > 0
-                    ? (
-                      <div className={styles.projects}>
-                        {filteredProjects.map((project) => (
-                          <ProjectCard
-                            key={project.id}
-                            title={project.title}
-                            description={project.description}
-                            image={project.image}
-                            tags={project.tags}
-                            className={styles.projectCard}
-                          />
+                    {item.filters.length > 0 && (
+                      <div className={styles.filters}>
+                        {item.filters.map((filter) => (
+                          <button
+                            key={filter}
+                            className={cn(
+                              styles.filterButton,
+                              'transition-all duration-200 ease-in-out hover:scale-105',
+                              selectedFilter === filter && styles.filterButtonActive
+                            )}
+                            onClick={() => setSelectedFilter(filter)}
+                            type="button"
+                          >
+                            {filter}
+                          </button>
                         ))}
                       </div>
-                    )
-                    : (
-                      <div className={styles.projects}>
-                        <div className="flex items-center justify-center py-8 text-gray-500">
-                          <p>No projects available for this category.</p>
-                        </div>
-                      </div>
                     )}
+
+                    {isLoading
+                      ? (
+                        <div className={styles.projects}>
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                          </div>
+                        </div>
+                      )
+                      : filteredProjects.length > 0
+                      ? (
+                        <div className={styles.projects}>
+                          {filteredProjects.map((project) => (
+                            <ProjectCard
+                              key={project.id}
+                              title={project.title}
+                              description={project.description}
+                              image={project.image}
+                              tags={project.tags}
+                              className={styles.projectCard}
+                            />
+                          ))}
+                        </div>
+                      )
+                      : (
+                        <div className={styles.projects}>
+                          <div className="flex items-center justify-center py-8 text-gray-500">
+                            <p>No projects available for this category.</p>
+                          </div>
+                        </div>
+                      )}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           )
         })}
