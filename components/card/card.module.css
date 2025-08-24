@@ -1,0 +1,59 @@
+/* Card component styles */
+.card {
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card.default {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.card.outlined {
+  background: transparent;
+  border: 2px solid #e5e7eb;
+  box-shadow: none;
+}
+
+.card.elevated {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+.cardHeader {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.cardHeader p {
+  margin: 4px 0 0 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.cardContent {
+  margin-bottom: 16px;
+}
+
+.cardContent:last-child {
+  margin-bottom: 0;
+}
+
+.cardFooter {
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

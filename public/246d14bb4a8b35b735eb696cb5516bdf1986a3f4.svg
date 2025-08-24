@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 48405">
+<rect width="64" height="64" rx="32" fill="var(--fill-0, #020304)"/>
+<path id="Arrow 3" d="M32.7071 24.2929C32.3166 23.9024 31.6834 23.9024 31.2929 24.2929L24.9289 30.6569C24.5384 31.0474 24.5384 31.6805 24.9289 32.0711C25.3195 32.4616 25.9526 32.4616 26.3431 32.0711L32 26.4142L37.6569 32.0711C38.0474 32.4616 38.6805 32.4616 39.0711 32.0711C39.4616 31.6805 39.4616 31.0474 39.0711 30.6569L32.7071 24.2929ZM32 39L33 39L33 25L32 25L31 25L31 39L32 39Z" fill="var(--stroke-0, white)"/>
+</g>
+</svg>

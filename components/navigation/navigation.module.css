@@ -1,0 +1,199 @@
+/* Navigation component styles */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 90px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.navigation:hover {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.navigation.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navigation.scrolled:hover {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.brandSection {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+  place-items: start;
+  line-height: 0;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.brandName {
+  font-family: 'Koulen', sans-serif;
+  font-size: 29.091px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  white-space: pre;
+  grid-area: 1 / 1;
+  transition: color 0.3s ease;
+}
+
+.brandSubtitle {
+  font-family: 'Korolev Condensed W04 Bold', sans-serif;
+  font-size: 10.909px;
+  font-weight: 400;
+  margin-left: 115.455px;
+  margin-top: 13.637px;
+  line-height: normal;
+  white-space: pre;
+  grid-area: 1 / 1;
+  transition: color 0.3s ease;
+}
+
+.menuSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: 'Satoshi', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: pre;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-sizing: border-box;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: transparent;
+}
+
+.navigation.scrolled .navButton {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navButtonSecondary {
+  background: transparent;
+  color: #020304;
+  transition: all 0.3s ease;
+}
+
+.navButtonSecondary:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navigation.scrolled .navButtonSecondary {
+  background: transparent;
+  color: #ffffff;
+}
+
+.navigation.scrolled .navButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.navButtonPrimary {
+  background: transparent;
+  color: #020304;
+  transition: all 0.3s ease;
+}
+
+.navButtonPrimary:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation.scrolled .navButtonPrimary {
+  background: transparent;
+  color: #ffffff;
+}
+
+.navigation.scrolled .navButtonPrimary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigation {
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .brandName {
+    font-size: 24px;
+  }
+
+  .brandSubtitle {
+    font-size: 9px;
+    margin-left: 80px;
+    margin-top: 10px;
+  }
+
+  .menuSection {
+    gap: 6px;
+  }
+
+  .navButton {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    padding: 12px 16px;
+  }
+}

@@ -1,0 +1,145 @@
+.section {
+  padding: 200px 0 48px 90px;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+.projectSection {
+  margin-bottom: 120px;
+}
+
+.projectSection:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  margin: 0 0 80px 0;
+  text-align: left;
+  max-width: 800px;
+  position: relative;
+  z-index: 10;
+}
+
+.sectionSubtitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: white;
+  margin: 0 0 32px 0;
+  text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+.projectsContainer {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 8px 0;
+}
+
+.projectsScroll {
+  display: flex;
+  gap: 24px;
+  padding: 8px 0 24px 0;
+  width: max-content;
+  min-width: 100%;
+  position: relative;
+}
+
+.projectsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.projectsContainer {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.projectCard {
+  flex: 0 0 400px;
+  height: 533px; /* 9:12 aspect ratio */
+  min-width: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section {
+    padding: 200px 0 48px 60px;
+  }
+
+  .sectionTitle {
+    font-size: 56px;
+  }
+
+  .sectionSubtitle {
+    font-size: 28px;
+  }
+
+  .projectSection {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 120px 0 48px 24px;
+  }
+  
+  .sectionTitle {
+    font-size: 48px;
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .sectionSubtitle {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .projectCard {
+    flex: 0 0 320px;
+    height: 427px; /* 9:12 aspect ratio */
+    min-width: 320px;
+  }
+
+  .projectSection {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 0 48px 16px;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
+
+  .sectionSubtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .projectCard {
+    flex: 0 0 280px;
+    height: 373px; /* 9:12 aspect ratio */
+    min-width: 280px;
+  }
+  
+  .projectsScroll {
+    gap: 16px;
+  }
+
+  .projectSection {
+    margin-bottom: 48px;
+  }
+}

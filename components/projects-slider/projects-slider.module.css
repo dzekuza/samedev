@@ -1,0 +1,109 @@
+.section {
+  padding: 200px 0 48px 0;
+  background-color: #0a0a0a;
+  color: white;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  margin: 0 0 48px 0;
+  text-align: left;
+  max-width: 800px;
+  padding: 0 90px;
+  position: relative;
+  z-index: 10;
+}
+
+.projectsContainer {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 0;
+}
+
+.projectsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.projectsScroll {
+  display: flex;
+  gap: 24px;
+  padding: 64px 90px 64px 90px;
+  width: max-content;
+  min-width: 100%;
+  position: relative;
+}
+
+.projectCard {
+  flex: 0 0 400px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbars - moved to projectsContainer */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section {
+    padding: 200px 0 48px 0;
+  }
+
+  .sectionTitle {
+    font-size: 56px;
+    padding: 0 60px;
+  }
+
+  .projectsScroll {
+    padding: 64px 60px 64px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 120px 0 48px 0;
+  }
+
+  .sectionTitle {
+    font-size: 48px;
+    max-width: 100%;
+    padding: 0 24px;
+  }
+
+  .projectsScroll {
+    padding: 64px 24px 64px 24px;
+  }
+
+  .projectCard {
+    flex: 0 0 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 0 48px 0;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+    padding: 0 16px;
+  }
+
+  .projectsScroll {
+    padding: 64px 16px 64px 16px;
+  }
+
+  .projectCard {
+    flex: 0 0 280px;
+  }
+
+  .projectsScroll {
+    gap: 16px;
+  }
+}

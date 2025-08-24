@@ -1,0 +1,408 @@
+.section {
+  padding: 200px 0 48px 90px;
+  background-color: #0a0a0a;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.header {
+  max-width: 500px;
+}
+
+.title {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: white;
+  margin: 0 0 24px 0;
+}
+
+.description {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.chatContainer {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.chatIcon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.chatInfo {
+  flex: 1;
+}
+
+.chatTitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 4px 0;
+}
+
+.chatSubtitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.chatInput {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.preparedMessages {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.preparedMessageButton {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.preparedMessageButton:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.preparedMessageButton:disabled {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.preparedMessageButton:active {
+  transform: translateY(0);
+}
+
+.chatHistory {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.chatMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background: #ff6b35;
+  color: #ffffff;
+}
+
+.aiMessage {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.messageContent {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.messageTime {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 11px;
+  opacity: 0.6;
+  align-self: flex-end;
+}
+
+.errorMessage {
+  padding: 12px 16px;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 8px;
+  color: #fca5a5;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.promptInput {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+}
+
+.textarea {
+  color: white !important;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.actions {
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+.sendButton {
+  background: #ff6b35 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  width: 40px !important;
+  height: 40px !important;
+  transition: all 0.3s ease;
+}
+
+.sendButton:hover:not(:disabled) {
+  background: #e55a2b !important;
+  transform: translateY(-2px);
+}
+
+.sendButton:disabled {
+  background: rgba(255, 255, 255, 0.1) !important;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.buttonIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chatFeatures {
+  display: grid;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.featureIcon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.featureText h4 {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 4px 0;
+}
+
+.featureText p {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section {
+    padding: 200px 0 48px 60px;
+  }
+
+  .content {
+    gap: 60px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 120px 0 48px 24px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 48px;
+    max-width: 100%;
+  }
+
+  .chatContainer {
+    padding: 24px;
+  }
+
+  .chatHeader {
+    margin-bottom: 20px;
+  }
+
+  .chatInput {
+    margin-bottom: 24px;
+  }
+
+  .preparedMessages {
+    justify-content: center;
+  }
+
+  .preparedMessageButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .chatHistory {
+    max-height: 300px;
+  }
+
+  .chatMessage {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 0 48px 16px;
+  }
+
+  .content {
+    gap: 32px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .chatContainer {
+    padding: 20px;
+  }
+
+  .chatHeader {
+    margin-bottom: 16px;
+  }
+
+  .chatInput {
+    margin-bottom: 20px;
+  }
+
+  .preparedMessages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .preparedMessageButton {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .chatHistory {
+    max-height: 250px;
+    padding: 12px;
+  }
+
+  .chatMessage {
+    max-width: 95%;
+    padding: 10px 12px;
+  }
+}

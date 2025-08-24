@@ -1,0 +1,259 @@
+/* What We Do Section Styles */
+.section {
+  background: #ffffff;
+  padding: 200px 0 0 0;
+  width: 100%;
+}
+
+.sectionTitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 32px 0;
+  padding: 0 90px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+}
+
+.accordionItem:last-child {
+  border-bottom: none;
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 90px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: #f9fafb;
+}
+
+.accordionTitle {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0;
+  text-align: left;
+  max-width: 800px;
+}
+
+.accordionIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+}
+
+.accordionContent {
+  background: #f15601;
+  border-radius: 0;
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+  padding: 64px 90px;
+  color: #000000;
+  width: 100%;
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.description {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: #000;
+  margin: 0 0 32px 0;
+  max-width: 800px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  background: #ffffff;
+  border: none;
+  border-radius: 8px;
+  color: #000000;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.filterButtonActive {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+.projects {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.projectCard {
+  flex: 1;
+  background: transparent;
+  border-radius: 26px;
+  overflow: visible;
+  position: relative;
+  aspect-ratio: 4/3;
+  min-height: 400px;
+  margin: 0;
+  padding: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .section {
+    padding: 200px 0 0 0;
+  }
+
+  .sectionTitle {
+    padding: 0 60px;
+  }
+
+  .accordionHeader {
+    padding: 8px 60px;
+  }
+
+  .accordionTitle {
+    font-size: 56px;
+  }
+
+  .accordionContent {
+    padding: 64px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 120px 0 0 0;
+  }
+
+  .sectionTitle {
+    padding: 0 24px;
+  }
+
+  .accordionHeader {
+    padding: 8px 24px;
+  }
+
+  .accordionTitle {
+    font-size: 48px;
+    max-width: 100%;
+  }
+
+  .accordionIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .accordionContent {
+    padding: 64px 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .filters {
+    gap: 12px;
+  }
+
+  .filterButton {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 80px 0 0 0;
+  }
+
+  .sectionTitle {
+    padding: 0 16px;
+  }
+
+  .accordionHeader {
+    padding: 16px 16px;
+  }
+
+  .accordionTitle {
+    font-size: 36px;
+  }
+
+  .accordionContent {
+    padding: 64px 16px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterButton {
+    width: 100%;
+    text-align: center;
+  }
+}
